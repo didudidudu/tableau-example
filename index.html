@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title>扁平化可伸展导航[原创]</title>
+	
+    <link rel="stylesheet" type="text/css" href="css/nav.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+	
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/nav.js"></script>
+	<style type="text/css">
+		.contentbar{
+			/*margin-left: 220px;*/
+			float: left;
+			width:calc(100% - 220px);
+			height: 100%;
+		}
+		.contentbar-min{
+			width:calc(100% - 60px);
+		}
+	</style>
+</head>
+<body>
+    <div class="nav">
+        <div class="nav-top">
+            <div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)"><img src="images/mini.png" ></div>
+        </div>
+        <ul>
+            <li class="nav-item">
+                <a href="javascript:void(0);" target="pages/1.html"><i class="my-icon nav-icon icon_2"></i><span>趋势与构成</span><i class="my-icon nav-more"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:void(0);" target="pages/2.html"><i class="my-icon nav-icon icon_2"></i><span>申请目标国</span><i class="my-icon nav-more"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:void(0);" target="pages/3.html"><i class="my-icon nav-icon icon_2"></i><span>发明人信息</span><i class="my-icon nav-more"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="javascript:void(0);"><i class="my-icon nav-icon icon_1"></i><span>其它</span><i class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a href="javascript:;"><span>订单列表</span></a></li>
+                    <li><a href="javascript:;"><span>打个酱油</span></a></li>
+                    <li><a href="javascript:;"><span>也打酱油</span></a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="contentbar">
+			<div id="iframeContent"></div>
+	</div>
+</body>
+<script type="text/javascript">
+		//替代iframe方法
+		$(function(){
+			$.get("pages/1.html",function(data){
+				$("#iframeContent").html(data);
+			});
+			
+			$(".nav ul li").click(function(){
+				var current = $(this),target = current.find('a').attr('target');
+				$.get(target,function(data){
+					$("#iframeContent").html(data);
+				});
+			});
+			
+		});
+	</script>
+</html>
+
+
