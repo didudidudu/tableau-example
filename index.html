@@ -11,8 +11,8 @@
     <script type="text/javascript" src="js/nav.js"></script>
 	<style type="text/css">
 		body{
-			min-width:1920px;
-			min-height:969px;
+/* 			min-width:1920px;
+			min-height:969px; */
 		}
 		.contentbar{
 			/*margin-left: 220px;*/
@@ -69,6 +69,7 @@
 			});
 			
 		});
+	$("body").css("min-width",window.screen.availWidth+"px").css("min-height",window.screen.availHeight-130+"px");
 	</script>
 </html>
 
