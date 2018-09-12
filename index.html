@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-    <title>Tableau-Example</title>
+    <title>Table-example</title>
 	
     <link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="stylesheet" type="text/css" href="font/iconfont.css">
@@ -11,18 +11,19 @@
     <script type="text/javascript" src="js/nav.js"></script>
 	<style type="text/css">
 		body{
-/* 			min-width:1920px;
-			min-height:969px; */
+			/*min-width:1920px;*/
+			/*min-height:969px;*/
 		}
 		.contentbar{
-			/*margin-left: 220px;*/
-			float: left;
-			width:calc(100% - 220px);
+			float: right;
+			width:calc(100% - 230px);
 			height: 100%;
 		}
 		.contentbar-min{
 			width:calc(100% - 60px);
 		}
+		li{cursor: pointer;}
+		.bc{background-color:#34A0CE}
 	</style>
 </head>
 <body>
@@ -31,46 +32,52 @@
             <div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)"><img src="images/mini.png" ></div>
         </div>
         <ul>
-            <li class="nav-item">
-                <a href="javascript:void(0);" target="pages/1.html"><i class="my-icon nav-icon icon_2"></i><span>趋势与构成</span><i class="my-icon nav-more"></i></a>
+            <!--<li class="nav-item">
+                <a target="pages/1.html"><i class="my-icon nav-icon icon_2"></i><span>趋势与构成</span><i class="my-icon nav-more"></i></a>
             </li>
             <li class="nav-item">
-                <a href="javascript:void(0);" target="pages/2.html"><i class="my-icon nav-icon icon_2"></i><span>申请目标国</span><i class="my-icon nav-more"></i></a>
+                <a target="pages/2.html"><i class="my-icon nav-icon icon_2"></i><span>申请目标国</span><i class="my-icon nav-more"></i></a>
             </li>
             <li class="nav-item">
-                <a href="javascript:void(0);" target="pages/3.html"><i class="my-icon nav-icon icon_2"></i><span>发明人信息</span><i class="my-icon nav-more"></i></a>
-            </li>
-<!--             <li class="nav-item">
-                <a href="javascript:void(0);"><i class="my-icon nav-icon icon_1"></i><span>其它</span><i class="my-icon nav-more"></i></a>
+                <a target="pages/3.html"><i class="my-icon nav-icon icon_2"></i><span>发明人信息</span><i class="my-icon nav-more"></i></a>
+            </li>-->
+            <li class="nav-item">
+                <a target=""><i class="my-icon nav-icon icon_2"></i><span>测试专题</span><i class="my-icon nav-more"></i></a>
                 <ul>
-                    <li><a href="javascript:;"><span>订单列表</span></a></li>
-                    <li><a href="javascript:;"><span>打个酱油</span></a></li>
-                    <li><a href="javascript:;"><span>也打酱油</span></a></li>
+                    <li class="bc"><a target="pages/1.html"><span>领导驾驶舱</span></a></li>
+                    <li><a target="pages/1.html"><span>趋势监测和预警</span></a></li>
+                    <li><a target="pages/2.html"><span>区域监测和预警</span></a></li>
+                    <li><a target="pages/3.html"><span>重点企业监测和预警</span></a></li>
                 </ul>
-            </li> -->
+            </li>
         </ul>
     </div>
     <div class="contentbar">
-			<div id="iframeContent" style="height: 100%"></div>
+		<div id="iframeContent" style="height: 100%"></div>
 	</div>
 </body>
 <script type="text/javascript">
-		//替代iframe方法
-		$(function(){
-			$.get("pages/1.html",function(data){
-				$("#iframeContent").html(data);
-			});
-			
-			$(".nav ul li").click(function(){
-				var current = $(this),target = current.find('a').attr('target');
+	//替代iframe方法
+	$(function(){
+		$.get("pages/1.html",function(data){
+			$("#iframeContent").html(data);
+		});
+		
+		$(".nav ul li").click(function(){
+			var current = $(this);
+			target = current.find('a').attr('target');
+			console.log(target);
+			if(target!=""){
 				$.get(target,function(data){
 					$("#iframeContent").html(data);
 				});
-			});
-			
+				$(this).addClass("bc").siblings().removeClass("bc")
+			}
 		});
+		
+	});
 	$("body").css("min-width",window.screen.availWidth+"px").css("min-height",window.screen.availHeight-130+"px");
-	</script>
+</script>
 </html>
 
 
