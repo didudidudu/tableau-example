@@ -32,23 +32,56 @@
             <div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)"><img src="images/mini.png" ></div>
         </div>
         <ul>
-            <!--<li class="nav-item">
-                <a target="pages/1.html"><i class="my-icon nav-icon icon_2"></i><span>趋势与构成</span><i class="my-icon nav-more"></i></a>
+            <li class="nav-item">
+                <a target=""><i class="my-icon nav-icon icon_2"></i><span>高端芯片</span><i class="my-icon nav-more"></i></a>
+            	<ul>
+                    <li class="bc"><a target="pages/0.html"><span>3D NAND存储器</span></a></li>
+                    <li><a target="pages/0.html"><span>存储器控制器</span></a></li>
+                    <li><a target="pages/0.html"><span>CPU</span></a></li>
+                </ul>
             </li>
             <li class="nav-item">
-                <a target="pages/2.html"><i class="my-icon nav-icon icon_2"></i><span>申请目标国</span><i class="my-icon nav-more"></i></a>
+                <a target=""><i class="my-icon nav-icon icon_2"></i><span>新一代网络技术</span><i class="my-icon nav-more"></i></a>
+            	<ul>
+                    <li><a target="pages/0.html"><span>第五代移动通信5G</span></a></li>
+                </ul>
             </li>
             <li class="nav-item">
-                <a target="pages/3.html"><i class="my-icon nav-icon icon_2"></i><span>发明人信息</span><i class="my-icon nav-more"></i></a>
-            </li>-->
-            <li class="nav-item">
-                <a target=""><i class="my-icon nav-icon icon_2"></i><span>测试专题</span><i class="my-icon nav-more"></i></a>
+                <a target=""><i class="my-icon nav-icon icon_2"></i><span>基础软件</span><i class="my-icon nav-more"></i></a>
                 <ul>
+                    <li><a target="pages/0.html"><span>操作系统内核</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a target=""><i class="my-icon nav-icon icon_2"></i><span>网络与信息安全设备</span><i class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a target="pages/0.html"><span>车联网</span></a></li>
+                    <li><a target="pages/0.html"><span>智能汽车多传感器融合</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a target=""><i class="my-icon nav-icon icon_2"></i><span>端计算技术</span><i class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a target="pages/0.html"><span>基于OS的人机交互</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a target=""><i class="my-icon nav-icon icon_2"></i><span>芯片制造装备和材料</span><i class="my-icon nav-more"></i></a>
+            </li>
+            <li class="nav-item">
+                <a target=""><i class="my-icon nav-icon icon_2"></i><span>大数据</span><i class="my-icon nav-more"></i></a>
+            </li>
+            <li class="nav-item">
+                <a target=""><i class="my-icon nav-icon icon_2"></i><span>人工智能</span><i class="my-icon nav-more"></i></a>
+            </li>
+            <li class="nav-item">
+                <a target=""><i class="my-icon nav-icon icon_2"></i><span>虚拟现实</span><i class="my-icon nav-more"></i></a>
+                <!--<ul>
                     <li class="bc"><a target="pages/0.html"><span>领导驾驶舱</span></a></li>
                     <li><a target="pages/1.html"><span>趋势监测和预警</span></a></li>
                     <li><a target="pages/2.html"><span>区域监测和预警</span></a></li>
                     <li><a target="pages/3.html"><span>重点企业监测和预警</span></a></li>
-                </ul>
+                </ul>-->
             </li>
         </ul>
     </div>
@@ -66,12 +99,13 @@
 		$(".nav ul li").click(function(){
 			var current = $(this);
 			target = current.find('a').attr('target');
-			console.log(target);
+//			console.log(target);
 			if(target!=""){
 				$.get(target,function(data){
 					$("#iframeContent").html(data);
 				});
-				$(this).addClass("bc").siblings().removeClass("bc")
+				$(this).parents(".nav").find(".nav-item li").removeClass("bc");
+				$(this).addClass("bc");
 			}
 		});
 		
