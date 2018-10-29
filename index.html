@@ -2,67 +2,74 @@
 <html>
 <head>
 <meta charset="utf-8">
-    <title>Table-example</title>
+    <title>Tableau-example</title>
 	
+	<link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="css/nav.css">
-    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
 	
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/nav.js"></script>
 	<style type="text/css">
-		body{
-			/*min-width:1920px;*/
-			/*min-height:969px;*/
-		}
 		.contentbar{
 			float: right;
-			width:calc(100% - 230px);
-			height: 100%;
+			width:88%;
+			/*height: 3000px;*/
+			transition: all .3s;
 		}
 		.contentbar-min{
 			width:calc(100% - 60px);
+			transition: all .3s;
 		}
 		li{cursor: pointer;}
 		.bc{background-color:#34A0CE}
+		.backc{
+			background: -webkit-linear-gradient(left top, #3b66b5 , #3bb5ab); /* Safari 5.1 - 6.0 */
+			background: -o-linear-gradient(bottom right, #3b66b5, #3bb5ab); /* Opera 11.1 - 12.0 */
+			background: -moz-linear-gradient(bottom right, #3b66b5, #3bb5ab); /* Firefox 3.6 - 15 */
+			background: linear-gradient(to bottom right, #3b66b5 , #3bb5ab); /* 标准的语法 */
+		}
 	</style>
 </head>
 <body>
     <div class="nav">
         <div class="nav-top">
+        	<!--<span class="glyphicon glyphicon-th-list" style="color: #FFFFFF;"></span>-->
             <div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)"><img src="images/mini.png" ></div>
         </div>
         <ul>
             <li class="nav-item">
                 <a target=""><i class="my-icon nav-icon icon_1"></i><span>高端芯片</span><i class="my-icon nav-more"></i></a>
             	<ul>
-                    <li class="bc"><a target="pages/0.html"><span>3D NAND存储器</span></a></li>
-                    <li><a target="pages/0.html"><span>存储器控制器</span></a></li>
-                    <li><a target="pages/0.html"><span>CPU</span></a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a target=""><i class="my-icon nav-icon icon_2"></i><span>新一代网络技术</span><i class="my-icon nav-more"></i></a>
-            	<ul>
-                    <li><a target="pages/0.html"><span>第五代移动通信5G</span></a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a target=""><i class="my-icon nav-icon icon_3"></i><span>基础软件</span><i class="my-icon nav-more"></i></a>
-                <ul>
-                    <li><a target="pages/0.html"><span>操作系统内核</span></a></li>
+                    <li class="bc"><a target="pages/carsensor_plan1.html"><span class="item-fontsize">3D NAND存储器(第一版)</span></a></li>
+                    <li><a target=""><span class="item-fontsize">存储器控制器</span></a></li>
+                    <li><a target=""><span class="item-fontsize">CPU</span></a></li>
                 </ul>
             </li>
             <li class="nav-item">
                 <a target=""><i class="my-icon nav-icon icon_4"></i><span>网络与信息安全设备</span><i class="my-icon nav-more"></i></a>
                 <ul>
-                    <li><a target="pages/0.html"><span>车联网</span></a></li>
-                    <li><a target="pages/0.html"><span>智能汽车多传感器融合</span></a></li>
+                    <li><a target="pages/carsensor_plan2.html"><span class="item-fontsize">智能汽车多传感器融合(第二版)</span></a></li>
+                    <li><a target="pages/carsensor.html"><span class="item-fontsize">智能汽车多传感器融合(第三版)</span></a></li>
+                    <li><a target=""><span class="item-fontsize">车联网</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a target=""><i class="my-icon nav-icon icon_2"></i><span>新一代网络技术</span><i class="my-icon nav-more"></i></a>
+            	<ul>
+                    <li><a target=""><span class="item-fontsize">第五代移动通信5G</span></a></li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a target=""><i class="my-icon nav-icon icon_3"></i><span>基础软件</span><i class="my-icon nav-more"></i></a>
+                <ul>
+                    <li><a target=""><span class="item-fontsize">操作系统内核</span></a></li>
                 </ul>
             </li>
             <li class="nav-item">
                 <a target=""><i class="my-icon nav-icon icon_5"></i><span>端计算技术</span><i class="my-icon nav-more"></i></a>
                 <ul>
-                    <li><a target="pages/0.html"><span>基于OS的人机交互</span></a></li>
+                    <li><a target=""><span class="item-fontsize">基于OS的人机交互</span></a></li>
                 </ul>
             </li>
             <li class="nav-item">
@@ -76,26 +83,29 @@
             </li>
             <li class="nav-item">
                 <a target=""><i class="my-icon nav-icon icon_9"></i><span>虚拟现实</span><i class="my-icon nav-more"></i></a>
-                <!--<ul>
-                    <li class="bc"><a target="pages/0.html"><span>领导驾驶舱</span></a></li>
-                    <li><a target="pages/1.html"><span>趋势监测和预警</span></a></li>
-                    <li><a target="pages/2.html"><span>区域监测和预警</span></a></li>
-                    <li><a target="pages/3.html"><span>重点企业监测和预警</span></a></li>
-                </ul>-->
             </li>
         </ul>
     </div>
     <div class="contentbar">
+    	<div class="topbar">
+    		<div class="blank_div"></div>
+    		<ul id="menulist">
+    			<!--<li class="backc"></li>-->
+    			<!--<li><p>领导驾驶舱</p></li>
+    			<li><p>趋势图</p></li>
+    			<li><p>申请人</p></li>-->
+    		</ul>
+    	</div>
 		<div id="iframeContent" style="height: 100%"></div>
 	</div>
 </body>
 <script type="text/javascript">
 	//替代iframe方法
 	$(function(){
-		$.get("pages/0.html",function(data){
+		$.get("pages/carsensor_plan1.html",function(data){
 			$("#iframeContent").html(data);
 		});
-		
+		//点击切换填充内容
 		$(".nav ul li").click(function(){
 			var current = $(this);
 			target = current.find('a').attr('target');
@@ -110,7 +120,7 @@
 		});
 		
 	});
-	$("body").css("min-width",window.screen.availWidth+"px").css("min-height",window.screen.availHeight-130+"px");
+//	$("body").css("min-width",window.screen.availWidth+"px").css("min-height",window.screen.availHeight-130+"px");
 </script>
 </html>
 

@@ -1,0 +1,116 @@
+body{background-color: #faf5f0;}
+@media (min-width: 768px){
+	.container {
+	    width: auto;
+	}
+}
+@media (min-width: 990px){
+	.container {
+	    width: 750px;
+	}
+}
+@media (min-width: 1210px){
+	.container {
+	    width: 970px;
+	}
+}
+@media (min-width: 1410px){
+	.container {
+	    width: 1170px;
+	}
+	.patent-title .title-f,.patent-title .title-s{
+		width: 60%!important;
+	}
+}
+/*标题*/
+.patent-title{
+	width: 100%;
+    /*height: 200px;*/
+    /*background-color: #DDE5EC;*/
+    padding: 30px;
+    overflow: hidden;
+}
+.patent-title .title-f,.patent-title .title-s{
+	font-size: 50px;
+	line-height: 60px;
+	font-family: "arial, helvetica, sans-serif, microsoft yahei" ;
+	text-align: center;
+    width: 100%;
+}
+.patent-title .title-f{
+    float: left;
+    font-weight: 600;
+}
+.patent-title .title-s{
+    float: right;
+    font-size: 46px;
+    font-weight: 400;
+}
+.c-red{color: #78181c;}
+.c-grey{color: #5b5758;}
+.c-green{color: #87a25d;}
+.c-blue{color: #00a5b5;}
+.b-bottom{border-bottom: 2px dashed #5b5758;}
+.b-top{border-top: 2px dashed #5b5758;}
+.fl{float: left;}
+.fr{float: right;}
+/*内容*/
+.patent-content{
+	width: 100%;
+    /*height: 600px;*/
+}
+.foreword-content{
+	width: 100%;
+	padding: 40px 5px;
+	/*background-color: #DDE5EC;*/
+}
+.foreword-content p{
+	font-size: 20px;
+    font-weight: 600;
+    text-indent: 2em;
+    line-height: 30px;
+}
+.aspect-content{
+	width: 100%;
+	/*height: 300px;*/
+	color: darkgrey;
+	/*border-bottom: solid 2px #3C474C;*/
+}
+.aspect-content .title-bg{
+	width: 30%;
+    height: 50px;
+    background-color: #01a4b3;
+    color: #FFFFFF;
+    font-size: 16px;
+    text-align: center;
+    line-height: 50px;
+    padding: 0 15px;
+    border-radius: 25px 0;
+}
+.aspect-content .content-bg{
+	width: 100%;
+	overflow: hidden;
+	padding: 10px 0;
+}
+.aspect-content .aspect-summary P{
+	font-size: 16px;
+    text-indent: 2em;
+    line-height: 30px;
+}
+.overshow{
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/*总结 */
+.summary-content{
+	width: 100%;
+    padding: 40px 5px;
+}
+.summary-content p{
+	font-size: 20px;
+    font-weight: 600;
+    text-indent: 2em;
+    line-height: 30px;
+}
+

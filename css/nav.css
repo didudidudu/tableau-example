@@ -5,10 +5,19 @@ body,ul{margin:0;padding:0}
 body{font:14px "微软雅黑","宋体","Arial Narrow",HELVETICA;-webkit-text-size-adjust:100%;} 
 li{list-style:none} 
 a{text-decoration:none;}
+a:hover,a:visited,a:link,a:active{text-decoration:none;}
 
 /* nav */
-.nav{width: 220px;height: 100%;background: #263238;transition: all .3s;float: left;border-radius: 0 10px 10px 0;webkit-box-shadow: #888888 3px 0px 5px;-moz-box-shadow: #888888 3px 0px 5px;box-shadow: #888888 3px 0px 5px;}
-.nav a{display: block;overflow: hidden;padding-left: 20px;line-height: 46px;max-height: 46px;color: #dde5ec;transition: all .3s;}
+.nav{position:fixed;width: 12%;height: 100%;transition: all .3s;float: left;border-radius: 0 10px 10px 0;webkit-box-shadow: #888888 3px 0px 5px;-moz-box-shadow: #888888 3px 0px 5px;box-shadow: #888888 3px 0px 5px;
+	/*background: #263238;*/
+	background: -webkit-linear-gradient(left top, #3b66b5 , #3bb5ab); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom right, #3b66b5, #3bb5ab); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom right, #3b66b5, #3bb5ab); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom right, #3b66b5 , #3bb5ab); /* 标准的语法 */
+	
+	z-index: 2;
+}
+.nav a{display: block;overflow: hidden;padding-left: 20px;line-height: 46px;max-height: 46px;color: #FFFFFF;transition: all .3s;}
 .nav a span{margin-left: 30px;}
 .nav-item{position: relative;}
 .nav-item.nav-show{border-bottom: none;}
@@ -37,7 +46,7 @@ a{text-decoration:none;}
 .nav-show .nav-more{transform:rotate(90deg);}
 .nav-show,.nav-item>a:hover{color: #FFF;background:rgba(0,0,0,.1);}
 .nav-show>a:before,.nav-item>a:hover:before{opacity:1;}
-.nav-item li:hover a{color: #FFF;background: rgba(0, 0, 0,.1);}
+.nav-item li:hover a{color: #dff3ff;background: rgba(0, 0, 0,.1);}
 
 /* nav-mini */
 .nav-mini.nav{width: 60px;}
@@ -50,7 +59,54 @@ a{text-decoration:none;}
 .nav-mini.nav .nav-item:hover a:before{opacity:1;}
 .nav-mini.nav .nav-item:hover ul{display: block;}
 
+.item-fontsize{font-size: 12px;}
 
+/*顶部栏*/
+.topbar{
+	width: 100%;height: 40px;background: #FFFFFF;position: fixed;border-bottom: solid 2px;
+	border-image: -webkit-linear-gradient( #3b66b5 , #3bb5ab) 10 10; /* Safari 5.1 - 6.0 */
+	border-image: -o-linear-gradient( #3b66b5, #3bb5ab) 10 10; /* Opera 11.1 - 12.0 */
+	border-image: -moz-linear-gradient( #3b66b5, #3bb5ab) 10 10; /* Firefox 3.6 - 15 */
+	border-image: linear-gradient( #3b66b5 , #3bb5ab) 10 10; /* 标准的语法 */
+	/*line-height: 38px;*/
+	z-index: 1;
+}
+.topbar .blank_div{
+	width: 30px;height:100%;
+	border-right: solid 2px #3bb5ab;
+	float: left;
+}
+.topbar ul{
+	overflow: hidden;
+}
+.topbar ul li{
+	float: left;
+	min-width: 100px;
+	text-align: center;
+	/*background-color: #f2f2f2;*/
+	transition: all 0.3s;
+}
+.topbar ul li:hover{
+	background: -webkit-linear-gradient(left top, #3b66b5 , #3bb5ab); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom right, #3b66b5, #3bb5ab); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom right, #3b66b5, #3bb5ab); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom right, #3b66b5 , #3bb5ab); /* 标准的语法 */
+	color: #FFFFFF;
+}
+.topbar-bg{
+	background: -webkit-linear-gradient(left top, #3b66b5 , #3bb5ab); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom right, #3b66b5, #3bb5ab); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom right, #3b66b5, #3bb5ab); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom right, #3b66b5 , #3bb5ab); /* 标准的语法 */
+	color: #FFFFFF;
+}
+.topbar ul li p{
+	margin: 6px auto;
+    border-right: solid 2px #3bb5ab;
+    line-height: 26px;
+    padding: 0 10px;
+}
+#iframeContent{margin-top: 45px;}
 
 
 

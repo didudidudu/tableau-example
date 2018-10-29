@@ -1,0 +1,19 @@
+.toptabs{
+	width: 100%;
+	height: 900px;
+	
+	/*box-sizing: border-box;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;*/
+    display: inline-block;
+}
+.longcontent{
+	white-space: nowrap;
+	
+	left: 0%;
+	position: relative;
+	transition: all 0.3s;
+}
+#iframeContent{overflow-x: hidden;}
