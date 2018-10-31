@@ -1,0 +1,132 @@
+body,html{height: 100%;width: 100%;}
+*{margin: 0;padding: 0;}
+.box{
+	min-height: 100%;
+}
+.headbar{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 80px;
+	width: 100%;
+	background-color: rgba(252,249,252,0.8);
+	/*border-bottom: 1px solid rgba(197,194,197,0.6);*/
+	border-bottom: 4px solid rgb(22, 102, 162);
+	z-index: 99;
+}
+.headbar .headbar-content{
+	width: 1200px;
+	margin: 0 auto;
+	height: 100%;
+}
+.logo{
+	float: left;
+	/*position: absolute;*/
+	margin-left: 30px;
+	margin-top: 15px;
+	/*left: 0;*/
+}
+.logo span{
+	font-size: 20px;
+    font-weight: 600;
+    color: #1666a2;
+    font-family: "微软雅黑";
+    -webkit-font-smoothing: subpixel-antialiased
+	-moz-osx-font-smoothing: grayscale;
+}
+.menu{
+	float: right;
+	margin-right: 30px;
+	margin-top: 45px;
+    /* bottom: 0; */
+    /*position: absolute;*/
+    /*bottom: 0;
+    right: 0;*/
+}
+/* ul li以横排显示 */
+div.menu ul
+{
+    list-style:none; /* 去掉ul前面的符号 */
+	margin: 0px; /* 与外界元素的距离为0 */
+	padding: 0px; /* 与内部元素的距离为0 */
+	width: auto; /* 宽度根据元素内容调整 */
+}
+div.menu ul li
+{
+    float:left; /* 向左漂移，将竖排变为横排 */
+   border-radius: 4px 4px 0 0;
+}
+div.menu ul li a, div.menu ul li a:visited
+{
+    color: black; 
+	display: block; /* 此元素将显示为块级元素，此元素前后会带有换行符 */
+	margin: 4px 50px; /* 内部填充的距离 */
+	padding: 2px;
+	text-decoration: none; /* 不显示超链接下划线 */
+	white-space: nowrap; /* 对于文本内的空白处，不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。 */
+	cursor: pointer;								
+}
+div.menu ul li:hover{
+	background-color: rgb(22, 102, 162);
+	transition: all 0.3s;
+}
+div.menu ul li:hover a{
+	color: #FFFFFF;
+	transition: all 0.2s;
+}
+/*div.menu ul li a:hover
+{
+    color: black; 
+	text-decoration: none; 
+   	border-bottom: 2px solid black;
+   	font-weight: 900;
+}*/
+div.menu ul li a:active
+{
+    text-decoration: none; 
+}
+.cur{
+	background-color: rgb(22, 102, 162);
+	/*border-bottom: 2px solid black;*/
+   	/*font-weight: 900;*/
+}
+.cur a{
+	color: #FFFFFF!important;
+}
+@media only screen and (max-width:1100px ) {
+	.menu{
+		display: none;
+	}
+}
+
+.contentbar{
+	/*position: absolute;*/
+	/*height: 100%;*/
+	width: 100%;
+	top: 0px;
+	left: 0px;
+	overflow:hidden
+	/*background-color: burlywood;*/
+}
+.contentbar .contentbar-content{
+	width: 62%;
+	min-width: 800px;
+	margin: 0 auto;
+	padding-top: 80px;
+}
+.contentbar .contentbar-content img{
+	width: 100%;
+}
+
+.footbar{
+	height: 100px;
+	width: 100%;
+	background-color: rgba(252,249,252,0.8);
+	border-top: 1px solid rgba(197,194,197,0.6);
+}
+.footbar p{
+	text-align: center;
+	line-height: 100px;
+	color: #333333;
+	margin: 0;
+}

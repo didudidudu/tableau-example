@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>专利信息可视化</title>
+		<link rel="stylesheet" href="css/login.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="login-content">
+				<div class="login-title">
+					<p class="p1">监测预警平台</p>
+					<!--<img src="images/title_03.png" />-->
+				</div>
+				<div class="login-box">
+					<!--<form>-->
+						<div class="welcom"><h2>欢迎登录</h2></div>
+						<div class="login-input">
+							<input required='' type='text'><label alt='用户名' placeholder='用户名'><img width="25px" height="25px" src="images/cancel3.png" /></label>
+							<input required='' type='password'><label alt='密码' placeholder='密码'><img width="25px" height="25px" src="images/cancel3.png" /></label>
+						</div>
+						<div class="login-rem">
+							<a>忘记密码？</a>
+						</div>
+						<div class="login-btn">
+							<button type="submit" id="signin">登录</button>
+						</div>
+					<!--</form>-->
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.min.js" ></script>
+	<script type="text/javascript" color="255,255,255" opacity="0.9"count="300"src="js/bgfocus.js"></script>
+	<script type="text/javascript">
+		$(function(){
+//			alert(window.screen.width);
+			if (window.screen.width > 1366){
+				$('head').append('<link rel="stylesheet" href="css/login.css" />');
+			}else if (window.screen.width <= 1366){
+				$('head').append('<link rel="stylesheet" href="css/login-mini.css" />');
+			} 
+			
+			var u_agent = navigator.userAgent; 
+			//判断IE浏览器
+			if(!(u_agent.indexOf('Trident')>-1&&u_agent.indexOf('rv:11')>-1 || u_agent.indexOf('MSIE')>-1&&u_agent.indexOf('Trident')>-1)){
+				//实时监测输入框是否为空
+				$("input").bind('input propertychange', function() {
+					if($(this).val() != ''){
+						$(this).next().find("img").show(100); 
+					}else{
+						$(this).next().find("img").hide(100);
+					}
+				});
+			}
+			
+			 $(document).keypress(function(e) {  
+			    // 回车键事件  
+		       if(e.which == 13) {  
+		   			$("#signin").click();  
+		       }  
+		   }); 
+		});
+		//img点击监听事件
+		$(".login-input img").on("click",function(){
+			$(this).parent().prev().val('');
+			$(this).hide(100);
+		});
+		$(".login-btn button").on('click',function(){
+			if($('input[type="text"]').val()=='admin'&&$('input[type="password"]').val()=='admin'){
+				window.location.href = "subject.html";
+			}else{
+				alert('用户名密码不正确');
+//				'input[type="text"]').val('');
+				$('input[type="password"]').val('');
+			}
+		})
+	</script>
+</html>
