@@ -10,7 +10,9 @@ $(function(){
 	$('.title-bg').on('click',function(e){
 		markh = $(this).data('num');
 		$.get("pages/"+ pageName +"/"+ pageName +"_h.html",function(data){
-			$("#iframeContent").html(data);
+			if(data){
+				$("#iframeContent").html(data);
+			}
 		});
 		$(".nav").find(".nav-item li[class='bc']").parent().find('li').eq(1).addClass("bc").siblings().removeClass("bc");
 	});
