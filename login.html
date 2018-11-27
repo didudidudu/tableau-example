@@ -67,13 +67,14 @@
 			$(this).hide(100);
 		});
 		$(".login-btn button").on('click',function(){
-			if($('input[type="text"]').val()=='admin'&&$('input[type="password"]').val()=='admin'){
-				window.location.href = "subject.html";
-			}else{
-				alert('用户名密码不正确');
-//				'input[type="text"]').val('');
-				$('input[type="password"]').val('');
-			}
+			window.location.href = "subject.html";
+//			if($('input[type="text"]').val()=='admin'&&$('input[type="password"]').val()=='admin'){
+//				window.location.href = "subject.html";
+//			}else{
+//				alert('用户名密码不正确');
+////				'input[type="text"]').val('');
+//				$('input[type="password"]').val('');
+//			}
 		})
 	</script>
 </html>

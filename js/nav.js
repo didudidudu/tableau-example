@@ -1,3 +1,7 @@
+/*
+ *	@Author: gjm
+ *	@Date: 2018-11-27
+*/
 $(function(){
     // nav收缩展开
     $('.nav-item>a').on('click',function(){
@@ -20,10 +24,18 @@ $(function(){
             $('.nav-item.nav-show').removeClass('nav-show');
             $('.nav-item').children('ul').removeAttr('style');
             $('.nav').addClass('nav-mini');
-            $('.contentbar').addClass('contentbar-min');
+            $('.index-contentbar').addClass('contentbar-min');
+            
+//          $('.back-plevel span').hide();
+            $(this).find('i').addClass('fa-angle-double-right').removeClass('fa-angle-double-left');
+            $('.nav-top .back-plevel').css('width','30px').css('bottom','40px');
         }else{
         	$('.nav').removeClass('nav-mini');
-            $('.contentbar').removeClass('contentbar-min');
+            $('.index-contentbar').removeClass('contentbar-min');
+            
+//          $('.back-plevel span').show();
+            $(this).find('i').addClass('fa-angle-double-left').removeClass('fa-angle-double-right');
+            $('.nav-top .back-plevel').css('width','100px').css('bottom','0px');
         }
     });
 });

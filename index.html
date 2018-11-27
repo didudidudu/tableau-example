@@ -5,104 +5,128 @@
     <title>Tableau-example</title>
 	
 	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/nav.css">
     <link rel="stylesheet" type="text/css" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/headbar.css" />
 	
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/nav.js"></script>
-	<style type="text/css">
-		.contentbar{
-			float: right;
-			width:88%;
-			/*height: 3000px;*/
-			transition: all .3s;
-		}
-		.contentbar-min{
-			width:calc(100% - 60px);
-			transition: all .3s;
-		}
-		li{cursor: pointer;}
-		.bc{background-color:#34A0CE}
-		.backc{
-			background: -webkit-linear-gradient(left top, #3b66b5 , #3bb5ab); /* Safari 5.1 - 6.0 */
-			background: -o-linear-gradient(bottom right, #3b66b5, #3bb5ab); /* Opera 11.1 - 12.0 */
-			background: -moz-linear-gradient(bottom right, #3b66b5, #3bb5ab); /* Firefox 3.6 - 15 */
-			background: linear-gradient(to bottom right, #3b66b5 , #3bb5ab); /* 标准的语法 */
-		}
-	</style>
 </head>
-<body>
-    <div class="nav">
-        <div class="nav-top">
-        	<!--<span class="glyphicon glyphicon-th-list" style="color: #FFFFFF;"></span>-->
-            <div id="mini" style="border-bottom:1px solid rgba(255,255,255,.1)"><img src="images/mini.png" ></div>
-        </div>
-        <ul>
-            <li class="nav-item">
-                <a target="" title="高端芯片"><i class="my-icon nav-icon icon_1"></i><span>高端芯片</span><i class="my-icon nav-more"></i></a>
-            	<ul>
-                    <li class="bc"><a target="pages/carsensor_plan1.html" title="(第一版)3D NAND存储器"><span class="item-fontsize">(第一版)3D NAND存储器</span></a></li>
-                    <li><a target="" title="存储器控制器"><span class="item-fontsize" title="">存储器控制器</span></a></li>
-                    <li><a target="" title="CPU"><span class="item-fontsize">CPU</span></a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a target="" title="网络与信息安全设备"><i class="my-icon nav-icon icon_4"></i><span>网络与信息安全设备</span><i class="my-icon nav-more"></i></a>
-                <ul>
-                    <li><a target="pages/carsensor_plan2.html" title="(第二版)智能汽车多传感器融合"><span class="item-fontsize">(第二版)智能汽车多传感器融合</span></a></li>
-                    <li><a target="pages/carsensor.html" title="(第三版)智能汽车多传感器融合"><span class="item-fontsize">(第三版)智能汽车多传感器融合</span></a></li>
-                    <li><a target="" title="车联网"><span class="item-fontsize">车联网</span></a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a target="" title="新一代网络技术"><i class="my-icon nav-icon icon_2"></i><span>新一代网络技术</span><i class="my-icon nav-more"></i></a>
-            	<ul>
-                    <li><a target="" title="第五代移动通信5G"><span class="item-fontsize">第五代移动通信5G</span></a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a target="" title="基础软件"><i class="my-icon nav-icon icon_3"></i><span>基础软件</span><i class="my-icon nav-more"></i></a>
-                <ul>
-                    <li><a target="" title="操作系统内核"><span class="item-fontsize">操作系统内核</span></a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a target="" title="端计算技术"><i class="my-icon nav-icon icon_5"></i><span>端计算技术</span><i class="my-icon nav-more"></i></a>
-                <ul>
-                    <li><a target="" title="基于OS的人机交互"><span class="item-fontsize">基于OS的人机交互</span></a></li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a target="" title="芯片制造装备和材料"><i class="my-icon nav-icon icon_6"></i><span>芯片制造装备和材料</span><i class="my-icon nav-more"></i></a>
-            </li>
-            <li class="nav-item">
-                <a target="" title="大数据"><i class="my-icon nav-icon icon_7"></i><span>大数据</span><i class="my-icon nav-more"></i></a>
-            </li>
-            <li class="nav-item">
-                <a target="" title="人工智能"><i class="my-icon nav-icon icon_8"></i><span>人工智能</span><i class="my-icon nav-more"></i></a>
-            </li>
-            <li class="nav-item">
-                <a target="" title="虚拟现实"><i class="my-icon nav-icon icon_9"></i><span>虚拟现实</span><i class="my-icon nav-more"></i></a>
-            </li>
-        </ul>
-    </div>
-    <div class="contentbar">
-    	<div class="topbar">
-    		<div class="blank_div"></div>
-    		<ul id="menulist">
-    			<!--<li class="backc"></li>-->
-    			<!--<li><p>领导驾驶舱</p></li>
-    			<li><p>趋势图</p></li>
-    			<li><p>申请人</p></li>-->
-    		</ul>
-    	</div>
-		<div id="iframeContent" style="height: 100%"></div>
+<body class="unselect">
+	<div class="headbar">
+		<div class="headbar-content">
+			<div class="logo">
+				<img src="images/images1/logo.jpg" />
+				<span>网信关键技术知识产权监测预警平台</span>
+			</div>
+			<div class="menu">
+				<ul id="select">
+					<li><a href="subject.html" id="0">首页</a></li>
+					<li><a href="database.html" id="1">数据展示</a></li>
+					<li class="cur"><a href="index.html" id="2">舆情分析</a></li>
+					<li><a href="pdflist.html" id="3">产业报告</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<div class="nav">
+	        <ul>
+	            <li class="nav-item">
+	                <a target="" title="3D NAND存储器"><i class="nav-icon fa fa-hdd-o"></i><span>3D NAND存储器</span><i class="my-icon nav-more"></i></a>
+	            	<ul>
+	                    <li class="bc"><a target="pages/3d_nand/3d_nand_p.html" title="基础专利统计"><span class="item-fontsize">基础专利统计</span></a></li>
+	                    <li><a target="pages/3d_nand/3d_nand_h.html" title="高级舆情监测"><span class="item-fontsize">高级舆情监测</span></a></li>
+	                    <!--<li><a target="pages/3d_nand/3d_nand2.html" title="趋势监测和预警（专利）"><span class="item-fontsize">趋势监测和预警（专利）</span></a></li>
+	                    <li><a target="pages/3d_nand/3d_nand3.html" title="区域监测和预警（专利）"><span class="item-fontsize">区域监测和预警（专利）</span></a></li>
+	                    <li><a target="pages/3d_nand/3d_nand1.html" title="重点企业监测和预警（专利）"><span class="item-fontsize">重点企业监测和预警（专利）</span></a></li>
+	                    <li><a target="pages/3d_nand/3d_nand4.html" title="技术监测和预警（专利）"><span class="item-fontsize">技术监测和预警（专利）</span></a></li>
+	                    <li><a target="pages/3d_nand/3d_nand0.html" title="领导驾驶舱/大屏监控"><span class="item-fontsize">领导驾驶舱/大屏监控</span></a></li>-->
+	                    <li><a target="" title="产业报告"><span class="item-fontsize">产业报告</span></a></li>
+	                </ul>
+	            </li>
+	            <li class="nav-item">
+	                <a target="" title="存储器控制器"><i class="nav-icon fa fa-microchip"></i><span>存储器控制器</span><i class="my-icon nav-more"></i></a>
+	                <ul>
+	                    <li><a target="" title="基础专利统计"><span class="item-fontsize">基础专利统计</span></a></li>
+	                    <li><a target="" title="高级舆情监测"><span class="item-fontsize">高级舆情监测</span></a></li>
+	                    <li><a target="" title="产业报告"><span class="item-fontsize">产业报告</span></a></li>
+	                </ul>
+	            </li>
+	            <li class="nav-item">
+	                <a target="" title="基于操作系统的人机交互"><i class="nav-icon fa fa-universal-access"></i><span>基于操作系统的人机交互</span><i class="my-icon nav-more"></i></a>
+	            	<ul>
+	                    <li><a target="" title="基础专利统计"><span class="item-fontsize">基础专利统计</span></a></li>
+	                    <li><a target="" title="高级舆情监测"><span class="item-fontsize">高级舆情监测</span></a></li>
+	                    <li><a target="" title="产业报告"><span class="item-fontsize">产业报告</span></a></li>
+	                </ul>
+	            </li>
+	            <li class="nav-item">
+	                <a target="" title="操作系统内核"><i class="nav-icon fa fa-laptop"></i><span>操作系统内核</span><i class="my-icon nav-more"></i></a>
+	                <ul>
+	                    <li><a target="" title="基础专利统计"><span class="item-fontsize">基础专利统计</span></a></li>
+	                    <li><a target="" title="高级舆情监测"><span class="item-fontsize">高级舆情监测</span></a></li>
+	                    <li><a target="" title="产业报告"><span class="item-fontsize">产业报告</span></a></li>
+	                </ul>
+	            </li>
+	            <li class="nav-item">
+	                <a target="" title="智能汽车多传感器融合"><i class="nav-icon fa fa-bus"></i><span>智能汽车多传感器融合</span><i class="my-icon nav-more"></i></a>
+	                <ul>
+	                    <li><a target="pages/carsensor/carsensor_p.html" title="基础专利统计"><span class="item-fontsize">基础专利统计</span></a></li>
+	                    <li><a target="pages/carsensor/carsensor_h.html" title="高级舆情监测"><span class="item-fontsize">高级舆情监测</span></a></li>
+	                    <li><a target="" title="产业报告"><span class="item-fontsize">产业报告</span></a></li>
+	                </ul>
+	            </li>
+	            <li class="nav-item">
+	                <a target="" title="5G"><i class="nav-icon fa fa-rss-square"></i><span>5G</span><i class="my-icon nav-more"></i></a>
+	                <ul>
+	                    <li><a target="" title="基础专利统计"><span class="item-fontsize">基础专利统计</span></a></li>
+	                    <li><a target="" title="高级舆情监测"><span class="item-fontsize">高级舆情监测</span></a></li>
+	                    <li><a target="" title="产业报告"><span class="item-fontsize">产业报告</span></a></li>
+	                </ul>
+	            </li>
+	            <li class="nav-item">
+	                <a target="" title="车联网"><i class="nav-icon fa fa-sitemap"></i><span>车联网</span><i class="my-icon nav-more"></i></a>
+	                <ul>
+	                    <li><a target="" title="基础专利统计"><span class="item-fontsize">基础专利统计</span></a></li>
+	                    <li><a target="" title="高级舆情监测"><span class="item-fontsize">高级舆情监测</span></a></li>
+	                    <li><a target="" title="产业报告"><span class="item-fontsize">产业报告</span></a></li>
+	                </ul>
+	            </li>
+	            <!--<li class="nav-item">
+	                <a target="" title="大数据"><i class="my-icon nav-icon icon_7"></i><span>大数据</span><i class="my-icon nav-more"></i></a>
+	            </li>
+	            <li class="nav-item">
+	                <a target="" title="人工智能"><i class="my-icon nav-icon icon_8"></i><span>人工智能</span><i class="my-icon nav-more"></i></a>
+	            </li>
+	            <li class="nav-item">
+	                <a target="" title="虚拟现实"><i class="my-icon nav-icon icon_9"></i><span>虚拟现实</span><i class="my-icon nav-more"></i></a>
+	            </li>-->
+	        </ul>
+	        <div class="nav-top">
+	        	<div class="back-plevel fl dn"><i class="fa fa-arrow-circle-left"></i><span>&nbsp;返回上级</span></div>
+	            <div class="list-btn fr" id="mini"><i class="fa fa-angle-double-left"></i></div>
+	        </div>
+	    </div>
+	    <div class="index-contentbar">
+			<div id="iframeContent" style="height: 100%;padding-top: 5px;"></div>
+			<!--底部导航-->
+			<div class="topbar">
+	    		<div class="blank_div"></div>
+	    		<ul id="menulist">
+	    		</ul>
+	    	</div>
+		</div>
 	</div>
 </body>
 <script type="text/javascript">
-	//替代iframe方法
+	var markh = 0;
+	
 	$(function(){
-		$.get("pages/carsensor_plan1.html",function(data){
+		//替代iframe方法
+		$.get("pages/3d_nand/3d_nand_p.html",function(data){
 			$("#iframeContent").html(data);
 		});
 		//点击切换填充内容
@@ -117,10 +141,25 @@
 				$(this).parents(".nav").find(".nav-item li").removeClass("bc");
 				$(this).addClass("bc");
 			}
+			markh = 0;
 		});
-		
+		//监听返回上级按钮
+		$('.nav-top .back-plevel').on('click',function(e){
+			var htmlname = $(this).data('name');
+			$.get("pages/"+ htmlname +"/"+ htmlname +"_p.html",function(data){
+				$("#iframeContent").html(data);
+			});
+			$(".nav").find(".nav-item li[class='bc']").parent().find('li').first().addClass("bc").siblings().removeClass("bc");
+			markh = 0;
+		});
 	});
-//	$("body").css("min-width",window.screen.availWidth+"px").css("min-height",window.screen.availHeight-130+"px");
+//	function getvl(name) {
+//		var reg = new RegExp("(^|\\?|&)"+ name +"=([^&]*)(\\s|&|$)", "i");
+//		if (reg.test(location.href)){
+//			return unescape(RegExp.$2.replace(/\+/g, " "));
+//		}
+//		return "";
+//	};
 </script>
 </html>
 

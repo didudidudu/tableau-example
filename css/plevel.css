@@ -85,7 +85,9 @@ body{background-color: #faf5f0;}
     text-align: center;
     line-height: 50px;
     padding: 0 15px;
-    border-radius: 25px 0;
+    border-radius: 35px 10px;
+    display: inline-block;
+    cursor: pointer;
 }
 .aspect-content .content-bg{
 	width: 100%;

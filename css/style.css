@@ -1,0 +1,35 @@
+.content{
+	padding-top: 80px;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.index-contentbar{
+	float: right;
+	width:88%;
+	height: 100%;
+	transition: all .3s;
+}
+.contentbar-min{
+	width:calc(100% - 60px);
+	transition: all .3s;
+}
+li{cursor: pointer;}
+.bc{background-color:#34A0CE}
+.backc{
+	background: -webkit-linear-gradient(left top, #3b66b5 , #3bb5ab); /* Safari 5.1 - 6.0 */
+	background: -o-linear-gradient(bottom right, #3b66b5, #3bb5ab); /* Opera 11.1 - 12.0 */
+	background: -moz-linear-gradient(bottom right, #3b66b5, #3bb5ab); /* Firefox 3.6 - 15 */
+	background: linear-gradient(to bottom right, #3b66b5 , #3bb5ab); /* 标准的语法 */
+}
+.dn{display: none;}
+.db{display: block;}
+.unselect{
+	moz-user-select: -moz-none; 
+	-moz-user-select: none; 
+	-o-user-select:none; 
+	-khtml-user-select:none; 
+	-webkit-user-select:none; 
+	-ms-user-select:none; 
+	user-select:none;
+}

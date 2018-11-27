@@ -2,13 +2,25 @@
 /* 以下实际使用若已初始化可删除 .nav height父级需逐级设置为100%*/
 body,html{height: 100%;/*background: #E2E2E2*/}
 body,ul{margin:0;padding:0}
-body{font:14px "微软雅黑","宋体","Arial Narrow",HELVETICA;-webkit-text-size-adjust:100%;} 
+body{font:14px "微软雅黑","宋体","Arial Narrow",HELVETICA;-webkit-text-size-adjust:100%;min-width: 1000px;} 
 li{list-style:none} 
 a{text-decoration:none;}
 a:hover,a:visited,a:link,a:active{text-decoration:none;}
 
 /* nav */
-.nav{position:fixed;width: 12%;/*min-width: 215px;*/height: 100%;transition: all .3s;float: left;border-radius: 0 10px 10px 0;webkit-box-shadow: #888888 3px 0px 5px;-moz-box-shadow: #888888 3px 0px 5px;box-shadow: #888888 3px 0px 5px;
+.nav{
+	position:fixed;
+	width: 12%;
+	min-width: 120px;
+	height: calc(100% - 80px);
+	height: -moz-calc(100% - 80px);
+	height: -webkit-calc(100% - 80px);
+	transition: all 0.3s;
+	float: left;
+	border-radius: 0 0px 10px 0;
+	webkit-box-shadow: #888888 3px 0px 15px;
+	-moz-box-shadow: #888888 3px 0px 15px;
+	box-shadow: #888888 3px 0px 15px;
 	/*background: #263238;*/
 	background: -webkit-linear-gradient(left top, #3b66b5 , #3bb5ab); /* Safari 5.1 - 6.0 */
 	background: -o-linear-gradient(bottom right, #3b66b5, #3bb5ab); /* Opera 11.1 - 12.0 */
@@ -17,14 +29,14 @@ a:hover,a:visited,a:link,a:active{text-decoration:none;}
 	
 	z-index: 2;
 }
-.nav a{display: block;overflow: hidden;padding-left: 20px;line-height: 46px;max-height: 46px;color: #FFFFFF;transition: all .3s;}
+.nav a{display: block;overflow: hidden;padding-left: 20px;line-height: 46px;max-height: 46px;color: #FFFFFF;transition: all .3s;border-radius: 0 10px 10px 0;}
 .nav a span{margin-left: 30px;display: inline-block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width: 65%;}
 .nav-item{position: relative;}
-.nav-item.nav-show{border-bottom: none;}
+.nav-item.nav-show{border-bottom: none;border-radius: 0 0px 10px 0;}
 .nav-item ul{display: none;background: rgba(0,0,0,.1);}
 .nav-item.nav-show ul{display: block;}
 .nav-item>a:before{content: "";position: absolute;left: 0px;width: 2px;height: 46px;background: #34A0CE;opacity:0;transition: all .3s;}
-.nav .nav-icon{font-size: 20px;position: absolute;margin-left:-1px;}
+.nav .nav-icon{font-size: 20px;position: absolute;margin-left:-1px;line-height: 46px;}
 /* 此处修改导航图标 可自定义iconfont 替换*/
 .icon_1::after{content: "\e620";}
 .icon_2::after{content: "\e669";}
@@ -38,6 +50,8 @@ a:hover,a:visited,a:link,a:active{text-decoration:none;}
 
 .icon_8::after{content: "\e65c";}
 .icon_9::after{content: "\e696";}
+
+.icon_10::after{content: "\e621";}
 /*---------------------*/
 .nav-more{float:right;margin-right: 4px;font-size: 12px;transition: transform .3s;}
 /* 此处为导航右侧箭头 如果自定义iconfont 也需要替换*/
@@ -49,7 +63,7 @@ a:hover,a:visited,a:link,a:active{text-decoration:none;}
 .nav-item li:hover a{color: #dff3ff;background: rgba(0, 0, 0,.1);}
 
 /* nav-mini */
-.nav-mini.nav{width: 60px;}
+.nav-mini.nav{width: 60px;min-width: 60px;}
 .nav-mini.nav .nav-icon{/* margin-left:-2px; */}
 .nav-mini.nav .nav-item>a span{display: none;}
 .nav-mini.nav .nav-more{margin-right: -20px;}
@@ -59,11 +73,55 @@ a:hover,a:visited,a:link,a:active{text-decoration:none;}
 .nav-mini.nav .nav-item:hover a:before{opacity:1;}
 .nav-mini.nav .nav-item:hover ul{display: block;}
 
-.item-fontsize{font-size: 12px;}
+.item-fontsize{font-size: 14px;}
 
+/*nav-top*/
+.fl{float: left;}
+.fr{float: right;}
+.nav-top{
+	position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+}
+#mini{cursor: pointer;transition: .1s;}
+#mini:hover{opacity: 0.6;}
+.nav-top .list-btn{
+    color: #fbf8f9;
+    padding: 3px 25px;
+    margin: 15px 0px;
+    cursor: pointer;
+    transition: .1s;
+    font-size: 20px;
+}
+.nav-top .back-plevel{
+	color: #fbf8f9;
+    border-radius: 32px;
+    border: 2px solid;
+    padding: 3px 5px;
+    margin: 15px 15px;
+    cursor: pointer;
+    transition: .1s;
+    overflow: hidden;
+    width: 100px;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 0px;
+}
+.nav-top .back-plevel:hover{
+	color: #e0dcde;
+}
+.nav-top .back-plevel i,.nav-top .back-plevel span{
+	font-size: 20px;
+	transition: .1s;
+}
+.nav-top .back-plevel span{
+	font-size: 15px;
+	vertical-align: top;
+}
 /*顶部栏*/
 .topbar{
-	width: 100%;height: 40px;background: #FFFFFF;position: fixed;border-bottom: solid 2px;
+	width: 100%;height: 35px;background: #fcfafc;position: fixed;border-top: solid 2px;
 	border-image: -webkit-linear-gradient( #3b66b5 , #3bb5ab) 10 10; /* Safari 5.1 - 6.0 */
 	border-image: -o-linear-gradient( #3b66b5, #3bb5ab) 10 10; /* Opera 11.1 - 12.0 */
 	border-image: -moz-linear-gradient( #3b66b5, #3bb5ab) 10 10; /* Firefox 3.6 - 15 */
@@ -72,8 +130,8 @@ a:hover,a:visited,a:link,a:active{text-decoration:none;}
 	z-index: 1;
 }
 .topbar .blank_div{
-	width: 30px;height:100%;
-	border-right: solid 2px #3bb5ab;
+	width: 20px;height:100%;
+	/*border-right: solid 2px #3bb5ab;*/
 	float: left;
 }
 .topbar ul{
@@ -83,8 +141,9 @@ a:hover,a:visited,a:link,a:active{text-decoration:none;}
 	float: left;
 	min-width: 100px;
 	text-align: center;
-	/*background-color: #f2f2f2;*/
+	background-color: #fcfafc;
 	transition: all 0.3s;
+	border-radius: 3px;
 }
 .topbar ul li:hover{
 	background: -webkit-linear-gradient(left top, #3b66b5 , #3bb5ab); /* Safari 5.1 - 6.0 */
@@ -102,11 +161,16 @@ a:hover,a:visited,a:link,a:active{text-decoration:none;}
 }
 .topbar ul li p{
 	margin: 6px auto;
-    border-right: solid 2px #3bb5ab;
-    line-height: 26px;
+    border-right: solid 1px #3bb5ab;
+    border-left: solid 1px #3bb5ab;
+    line-height: 21px;
     padding: 0 10px;
 }
-#iframeContent{margin-top: 45px;}
-
+.topbar ul li:first-child p{
+	border-left: solid 2px #3bb5ab;
+}
+.topbar ul li:last-child p{
+	border-right: solid 2px #3bb5ab;
+}
 
 
