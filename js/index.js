@@ -24,12 +24,13 @@ $(function(){
 	});
 	//监听返回上级按钮
 	$('.nav-top .back-plevel').on('click',function(e){
-		var htmlname = $(this).data('name');
-		$.get("pages/"+ htmlname +"/"+ htmlname +"_p.html",function(data){
+		$.get("pages/"+ $(this).attr('data-name') +"/"+ $(this).attr('data-name') +"_p.html",function(data){
+//		$.get("pages/"+ $(this).data('name') +"/"+ $(this).data('name') +"_p.html",function(data){
 			$("#iframeContent").html(data);
 		});
 		$(".nav").find(".nav-item li[class='bc']").parent().find('li').first().addClass("bc").siblings().removeClass("bc");
 		markh = 0;
+		e.stopPropagation();
 	});
 });
 
