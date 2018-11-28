@@ -24,7 +24,8 @@ $(function(){
 	});
 	//监听返回上级按钮
 	$('.nav-top .back-plevel').on('click',function(e){
-		$.get("pages/"+ $(this).attr('data-name') +"/"+ $(this).attr('data-name') +"_p.html",function(data){
+		var htmlname = $(this).attr('data-name');
+		$.get("pages/"+ htmlname +"/"+ htmlname +"_p.html",function(data){
 //		$.get("pages/"+ $(this).data('name') +"/"+ $(this).data('name') +"_p.html",function(data){
 			$("#iframeContent").html(data);
 		});

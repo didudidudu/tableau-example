@@ -1,3 +1,4 @@
+html,body{width: 100%;height: 100%;margin: 0;padding: 0;}
 .box{
 	min-height: 100%;
 }
@@ -7,10 +8,10 @@
 	left: 0px;
 	height: 80px;
 	width: 100%;
-	background-color: rgba(252,249,252,0.8);
+	background-color: rgba(255,255,255,1);
 	/*border-bottom: 1px solid rgba(197,194,197,0.6);*/
 	border-bottom: 4px solid rgb(22, 102, 162);
-	z-index: 99;
+	z-index: 999;
 }
 .headbar .headbar-content{
 	width: 1200px;
@@ -92,10 +93,11 @@ div.menu ul li a:active
 	/*position: absolute;*/
 	/*height: 100%;*/
 	width: 100%;
-	top: 0px;
-	left: 0px;
-	overflow:hidden
-	/*background-color: burlywood;*/
+	/*top: 0px;
+	left: 0px;*/
+	overflow:hidden;
+	min-height: calc(100vh - 101px);
+	padding: 40px 0 60px 0;
 }
 .contentbar .contentbar-content{
 	width: 62%;
@@ -110,12 +112,12 @@ div.menu ul li a:active
 .footbar{
 	height: 100px;
 	width: 100%;
-	background-color: rgba(252,249,252,0.8);
+	background-color: rgb(86, 91, 97);
 	border-top: 1px solid rgba(197,194,197,0.6);
 }
 .footbar p{
 	text-align: center;
 	line-height: 100px;
-	color: #333333;
+	color: #FFFFFF;
 	margin: 0;
 }
