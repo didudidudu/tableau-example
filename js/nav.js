@@ -28,14 +28,14 @@ $(function(){
             
 //          $('.back-plevel span').hide();
             $(this).find('i').addClass('fa-angle-double-right').removeClass('fa-angle-double-left');
-            $('.nav-top .back-plevel').css('width','30px').css('bottom','40px');
+            $('.nav-top .back-plevel').css('width','2.5rem').css('bottom','40px');
         }else{
         	$('.nav').removeClass('nav-mini');
             $('.index-contentbar').removeClass('contentbar-min');
             
 //          $('.back-plevel span').show();
             $(this).find('i').addClass('fa-angle-double-left').removeClass('fa-angle-double-right');
-            $('.nav-top .back-plevel').css('width','100px').css('bottom','0px');
+            $('.nav-top .back-plevel').css('width','8rem').css('bottom','0px');
         }
     });
 });

@@ -22,15 +22,20 @@ a:hover,a:visited,a:link,a:active{text-decoration:none;}
 	-moz-box-shadow: #888888 3px 0px 15px;
 	box-shadow: #888888 3px 0px 15px;
 	/*background: #263238;*/
-	background: -webkit-linear-gradient(left top, #3b66b5 , #3bb5ab); /* Safari 5.1 - 6.0 */
-	background: -o-linear-gradient(bottom right, #3b66b5, #3bb5ab); /* Opera 11.1 - 12.0 */
-	background: -moz-linear-gradient(bottom right, #3b66b5, #3bb5ab); /* Firefox 3.6 - 15 */
-	background: linear-gradient(to bottom right, #3b66b5 , #3bb5ab); /* 标准的语法 */
+	
+	/*background: -webkit-linear-gradient(left top, #3b66b5 , #3bb5ab); 
+	background: -o-linear-gradient(bottom right, #3b66b5, #3bb5ab); 
+	background: -moz-linear-gradient(bottom right, #3b66b5, #3bb5ab); 
+	background: linear-gradient(to bottom right, #3b66b5 , #3bb5ab); */
+	background: -webkit-linear-gradient(left top, #1666a2 , #305673); 
+	background: -o-linear-gradient(bottom right, #1666a2, #305673); 
+	background: -moz-linear-gradient(bottom right, #1666a2, #305673);
+	background: linear-gradient(to bottom right, #1666a2 , #305673);
 	
 	z-index: 2;
 }
 .nav a{display: block;overflow: hidden;padding-left: 20px;line-height: 46px;max-height: 46px;color: #FFFFFF;transition: all .3s;border-radius: 0 10px 10px 0;}
-.nav a span{margin-left: 30px;display: inline-block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width: 65%;}
+.nav a span{margin-left: 30px;display: inline-block;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;width: 65%;font-size: 1.4rem;}
 .nav-item{position: relative;}
 .nav-item.nav-show{border-bottom: none;border-radius: 0 0px 10px 0;}
 .nav-item ul{display: none;background: rgba(0,0,0,.1);}
@@ -103,7 +108,8 @@ a:hover,a:visited,a:link,a:active{text-decoration:none;}
     cursor: pointer;
     transition: .1s;
     overflow: hidden;
-    width: 100px;
+     /*width: 100px;*/
+   	width: 8rem;
     white-space: nowrap;
     position: absolute;
     bottom: 0px;
@@ -112,12 +118,16 @@ a:hover,a:visited,a:link,a:active{text-decoration:none;}
 	color: #e0dcde;
 }
 .nav-top .back-plevel i,.nav-top .back-plevel span{
-	font-size: 20px;
+	font-size: 2rem;
+	/*font-size: 20px;*/
 	transition: .1s;
 }
 .nav-top .back-plevel span{
-	font-size: 15px;
-	vertical-align: top;
+	font-size: 1.4rem;
+    vertical-align: top;
+    line-height: 1.7rem;
+	/*font-size: 15px;
+	vertical-align: top;*/
 }
 /*顶部栏*/
 .topbar{
@@ -163,8 +173,9 @@ a:hover,a:visited,a:link,a:active{text-decoration:none;}
 	margin: 6px auto;
     border-right: solid 1px #3bb5ab;
     border-left: solid 1px #3bb5ab;
-    line-height: 21px;
+    line-height: 1.8rem;
     padding: 0 10px;
+    font-size: 1.4rem;
 }
 .topbar ul li:first-child p{
 	border-left: solid 2px #3bb5ab;

@@ -18,4 +18,7 @@ $(function(){
 	});
 	//显示或隐藏返回上级按钮
 	$('.nav-top .back-plevel').hide();
+	
+	$(".topbar").hide();
+	$("#menulist").empty();
 });

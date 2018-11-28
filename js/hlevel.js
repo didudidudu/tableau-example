@@ -22,6 +22,7 @@ $(function(){
 	});
 });
 function bottomMenu(n){
+	$(".topbar").show();
 	$("#menulist").empty();
 	var num = 0;
 	$(".toptabs").each(function(e){
